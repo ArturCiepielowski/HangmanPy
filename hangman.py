@@ -1,28 +1,27 @@
 import random
 
-word_list = ["ardvark", "baboon", "camel"]
+word_list = ["aardvark", "baboon", "camel"]
+chosen_word = random.choice(word_list)
+word_length = len(chosen_word)
 
-chosen_word = word_list[random.randint(0, 2)]
+
+print(f"Pssst, the solution is {chosen_word}.")
+
 
 display = []
-for y in range(len(chosen_word)):
-    display.append("_")
-    # print(y)
+for _ in range(word_length):
+    display += "_"
+
+
+guess = input("Guess a letter: ").lower()
+
+
+for position in range(word_length):
+    letter = chosen_word[position]
+    print(
+        f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}"
+    )
+    if letter == guess:
+        display[position] = letter
 
 print(display)
-
-for letter in display:
-    if letter == "_":
-
-
-
-
-guess = input("Guess a letter\n").lower()
-
-
-
-
-for x, z in enumerate(chosen_word):
-    # print(x)
-    if z == guess:
-        display[x] = guess
