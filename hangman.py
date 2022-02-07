@@ -15,8 +15,7 @@ for x in chosen_word:
     else:
         print("Wrong")
 
-# if guess in list(chosen_word):
-#   print("Yes")
-
-# else:
-# print("No")
+display = []
+for x in range(len(chosen_word)):
+    display.append("_")
+print(display)
