@@ -7,10 +7,9 @@ chosen_word = word_list[random.randint(0, 2)]
 guess = input("Guess a letter\n").lower()
 
 print(chosen_word)
-splitWord = list(chosen_word)
-print(splitWord)
 
-for x in splitWord:
+
+for x in chosen_word:
     if x == guess:
         print("Right")
     else:
